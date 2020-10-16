@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    scroll-snap-type: y mandatory;
+    overflow: auto;
+
+    .section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        scroll-snap-align: start;
+        background-blend-mode: multiply;
+
+        &:nth-child(1) {
+            background-image: url(../images/bg-img-1.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-color: rgba($color: #2196f3, $alpha: 0.7);
+        }
+        &:nth-child(2) {
+            background-image: url(../images/bg-img-2.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-color: rgba($color: #ef5c8e, $alpha: 0.7);
+        }
+        &:nth-child(3) {
+            background-image: url(../images/bg-img-3.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-color: rgba($color: #2196f3, $alpha: 0.7);
+        }
+        &:nth-child(4) {
+            background-image: url(../images/bg-img-4.jpg);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-color: rgba($color: #f48eb1, $alpha: 0.7);
+        }
+
+        .content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%;
+            background: rgba(#ef3b36, 0.2);
+            padding: 30px;
+
+            h3 {
+                font-size: 28px;
+                font-weight: 400;
+                letter-spacing: 2px;
+                padding-bottom: 10px;
+                color: #ffffff;
+            }
+            p {
+                color: #ffffff;
+                text-align: justify;
+            }
+            a {
+                display: inline-block;
+                padding: 10px 25px;
+                background-color: #ccded8;
+                border-radius: 8px;
+                text-decoration: none;
+                margin-top: 15px;
+            }
+
+        }
+    }
+
+    .section:first-child {
+        .content {
+            background: rgba(black, 0.2);
+        }
+    }
+    .section:nth-child(3) {
+        .content {
+            background: rgba(#63b5f6, 0.2);
+        }
+    }
+    
+}
